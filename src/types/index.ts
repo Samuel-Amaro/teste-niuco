@@ -28,10 +28,30 @@ export type ResponseUser = {
   hireable?: boolean | null;
   bio?: string | null;
   twitter_username?: string | null;
-  public_repos?:	number | null;
-  public_gists?:	number | null;
-  followers?:	number | null;
-  following?:	number | null;
+  public_repos?: number | null;
+  public_gists?: number | null;
+  followers?: number | null;
+  following?: number | null;
   created_at?: string | null;
   updated_at?: string | null;
 };
+
+export type ResponseUserNotFound = {
+  message: string;
+  documentation_url: string;
+};
+
+export interface ErrorResponseUser extends Error {
+  info: string;
+}
+
+export type ResponseRepos = {
+  id?: number;
+  name?: string;
+  full_name?: string;
+  private?: false;
+  html_url?: string;
+  description?: string;
+  homepage?: string;
+  visibility?: string;
+}[];
