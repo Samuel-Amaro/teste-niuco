@@ -1,5 +1,6 @@
 export type SearchParams = {
   q?: string;
+  page?: string;
 };
 
 export type ResponseUser = {
