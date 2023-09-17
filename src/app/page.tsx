@@ -1,9 +1,7 @@
 import Form from "@/components/Form";
 import Searcher from "@/components/Searcher";
 import { SearchParams } from "@/types";
-import Link from "next/link";
 import styles from "./page.module.css";
-import Nav from "@/components/Nav";
 
 export default function Home({ searchParams }: { searchParams: SearchParams }) {
   const pageInd = searchParams.page ? searchParams.page : "1";
@@ -17,14 +15,14 @@ export default function Home({ searchParams }: { searchParams: SearchParams }) {
       </header>
       <main>
         <Form initialValue={searchParams.q} />
-        {/*<Searcher
+        <Searcher
           username={searchParams.q ? searchParams.q : "samuel-amaro"}
           pageIndex={
             !isNaN(parseInt(pageInd)) && parseInt(pageInd) >= 1
               ? parseInt(pageInd)
               : 1
           }
-        />*/}
+        />
       </main>
     </div>
   );
