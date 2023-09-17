@@ -1,32 +1,5 @@
-.nav{
-  background-color: var(--color02);
-  padding: 16px 32px;
-  margin: 0 0 32px 0;
-}
-
 .header{
   margin: 0 0 16px 0;
-}
-
-.list {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: 18px;
-}
-
-.link{
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 1.05rem;
-  text-transform: uppercase;
-}
-
-.link:is(:hover, :focus) {
-  text-decoration: underline;
 }
 
 .title{
