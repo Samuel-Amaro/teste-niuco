@@ -35,6 +35,8 @@ export default function Form({ initialValue }: { initialValue?: string }) {
       searchParams.delete("q");
     }
 
+    searchParams.set("page", "1");
+
     const newPathName = `${
       window.location.pathname
     }?${searchParams.toString()}`;
@@ -55,7 +57,12 @@ export default function Form({ initialValue }: { initialValue?: string }) {
         required
         className={styles.input}
       />
-      <button type="submit" aria-label="Search" title="Search" className={styles.btn}>
+      <button
+        type="submit"
+        aria-label="Search"
+        title="Search"
+        className={styles.btn}
+      >
         Search
       </button>
     </form>
