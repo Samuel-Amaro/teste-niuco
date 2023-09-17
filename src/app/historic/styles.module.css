@@ -1,0 +1,22 @@
+.containerMain{
+  padding: 0 16px;
+  max-width: 700px;
+  margin: 0 auto 48px auto;
+}
+
+.title{
+  color: white;
+  font-size: 2.3rem;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.description{
+  color: lightgray;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.header{
+  margin: 0 0 32px 0;
+}
