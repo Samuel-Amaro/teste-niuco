@@ -20,3 +20,17 @@
 .header{
   margin: 0 0 32px 0;
 }
+
+.messageUser{
+  color: white;
+  font-size: 2.2rem;
+  padding: 16px;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 750px) {
+  .containerMain {
+      padding: 0;
+    }
+}
