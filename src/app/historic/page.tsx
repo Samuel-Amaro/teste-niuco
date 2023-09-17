@@ -1,6 +1,6 @@
 import Historic from "@/components/Historic";
 import { Metadata } from "next";
-import Link from "next/link";
+import styles from "./styles.module.css";
 
 export const metadata: Metadata = {
   title: "History Searchs",
@@ -9,21 +9,10 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div>
-      <header>
-        <nav>
-          <Link
-            href="/"
-            target="_self"
-            rel="next"
-            title="Go Back Home"
-            aria-label="Go Back Home"
-          >
-            Home
-          </Link>
-        </nav>
-        <h1>History Searchs</h1>
-        <p>
+    <div className={styles.containerMain}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>History Searchs</h1>
+        <p className={styles.description}>
           Below are all previously searched terms, ordered by date and time by
           most recent
         </p>
