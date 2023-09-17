@@ -1,3 +1,5 @@
+import styles from "./page.module.css";
+
 export default function Loading() {
-  return <h1>Loading Page Home...</h1>;
+  return <h1 className={styles.messageLoading}>Loading Page Home...⏳</h1>;
 }
