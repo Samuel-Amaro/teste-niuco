@@ -6,6 +6,7 @@ import ProfileUser from "../ProfileUser";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import styles from "./styles.module.css";
 
 export default function Searcher({
   username,
@@ -16,7 +17,8 @@ export default function Searcher({
 }) {
   const [totalRepos, setTotalRepos] = useState(0);
   return (
-    <div>
+    <div className={styles.searcher}>
+      <h2 className={styles.title}>Profile User</h2>
       <SearchUser
         username={username}
         setTotalRepos={(newTotal: number) => setTotalRepos(newTotal)}
@@ -49,11 +51,11 @@ function SearchUser({
   }, [data]);
 
   if (isLoading) {
-    return <p>Loading Profile User...</p>;
+    return <p className={styles.messageUser}>Loading Profile User...</p>;
   }
 
   if (!data) {
-    return <p>Oops, {error?.info} user</p>;
+    return <p className={styles.messageUser}>Oops, {error?.info} user 😥</p>;
   }
 
   return <ProfileUser datas={data} />;
@@ -92,11 +94,13 @@ function SearchRepos({
   }
 
   if (isLoading) {
-    return <p>Loading Repositories User...</p>;
+    return <p className={styles.messageUser}>Loading Repositories User...</p>;
   }
 
   if (!data) {
-    return <p>Oops, not found repositories</p>;
+    return (
+      <p className={styles.messageUser}>Oops, not found repositories 😥</p>
+    );
   }
 
   function nextPageIndex() {
@@ -114,14 +118,24 @@ function SearchRepos({
   }
 
   return (
-    <div>
-      <h2>Repositories</h2>
-      <div>
+    <div className={styles.containerRepos}>
+      <h2 className={styles.containerReposTitle}>Repositories</h2>
+      <div className={styles.containerListRepos}>
         {data.map((repos, index) => (
-          <div key={repos.id ? repos.id : index}>
-            {repos.name && <h3>{repos.name}</h3>}
-            {repos.description && <p>{repos.description}</p>}
-            <div>
+          <div
+            key={repos.id ? repos.id : index}
+            className={styles.containerReposCard}
+          >
+            <span className={styles.containerReposCardIcon}>📁</span>
+            {repos.name && (
+              <h3 className={styles.containerReposCardTitle}>{repos.name}</h3>
+            )}
+            {repos.description && (
+              <p className={styles.containerReposCardDescription}>
+                {repos.description}
+              </p>
+            )}
+            <div className={styles.containerLinks}>
               {repos.html_url && (
                 <Link
                   href={repos.html_url}
@@ -129,6 +143,7 @@ function SearchRepos({
                   rel="external"
                   aria-label="Url to repositorie"
                   title="Url to repositorie"
+                  className={styles.containerReposLink}
                 >
                   Url
                 </Link>
@@ -140,6 +155,7 @@ function SearchRepos({
                   rel="external"
                   aria-label="HomePage"
                   title="HomePage"
+                  className={styles.containerReposLink}
                 >
                   HomePage
                 </Link>
@@ -148,7 +164,7 @@ function SearchRepos({
           </div>
         ))}
       </div>
-      <div>
+      <div className={styles.containerButtons}>
         <button
           type="button"
           aria-label="Previous"
@@ -162,6 +178,7 @@ function SearchRepos({
             }
           }}
           disabled={pageIndex === 1}
+          className={styles.btn}
         >
           Previous
         </button>
@@ -178,6 +195,7 @@ function SearchRepos({
             }
           }}
           disabled={pageIndex === pageCount}
+          className={styles.btn}
         >
           Next
         </button>
