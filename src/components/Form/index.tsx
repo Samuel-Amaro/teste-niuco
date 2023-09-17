@@ -1,5 +1,6 @@
 "use client";
 
+import { useHistoricContext } from "@/context/HistoricContext";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ export default function Form({ initialValue }: { initialValue?: string }) {
     initialValue?.trim() ? initialValue : "",
   );
   const router = useRouter();
+  const historicContext = useHistoricContext();
 
   function handleChangeInput(e: React.ChangeEvent<HTMLInputElement>) {
     setUsername(e.target.value);
@@ -17,6 +19,7 @@ export default function Form({ initialValue }: { initialValue?: string }) {
     e.preventDefault();
     if (username.trim()) {
       updateSearchParams(username.trim());
+      historicContext.addHistoric(username.trim());
       return;
     }
     alert("Please enter a username");
