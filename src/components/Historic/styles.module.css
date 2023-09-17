@@ -1,0 +1,37 @@
+.list{
+  list-style: none;
+}
+
+.card{
+  background-color: var(--color02);
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.cardIcon{
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.timestamp{
+  color: white;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.cardLink{
+  text-decoration: none;
+  display: block;
+  color: lightgray;
+  font-size: 500;
+  font-size: 1.10rem;
+}
+
+.cardLink:is(:hover, :focus) {
+  text-decoration: underline;
+}
+
+.listItem:not(:last-child) {
+  margin: 0 0 16px 0;
+}
