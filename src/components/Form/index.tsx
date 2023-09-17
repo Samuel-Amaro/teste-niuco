@@ -3,6 +3,7 @@
 import { useHistoricContext } from "@/context/HistoricContext";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import styles from "./styles.module.css";
 
 export default function Form({ initialValue }: { initialValue?: string }) {
   const [username, setUsername] = useState(
@@ -42,7 +43,7 @@ export default function Form({ initialValue }: { initialValue?: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmitForm}>
+    <form onSubmit={handleSubmitForm} className={styles.form}>
       <input
         type="search"
         title="Enter a username"
@@ -52,11 +53,11 @@ export default function Form({ initialValue }: { initialValue?: string }) {
         value={username}
         onChange={handleChangeInput}
         required
+        className={styles.input}
       />
-      <button type="submit" aria-label="Search" title="Search">
+      <button type="submit" aria-label="Search" title="Search" className={styles.btn}>
         Search
       </button>
-      {username && `username: ${username}`}
     </form>
   );
 }
