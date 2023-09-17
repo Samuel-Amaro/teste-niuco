@@ -65,5 +65,5 @@ export type Historic = {
 
 export type HistoricContextType = {
   historic: Historic[];
-  addHistoric: (histor: Historic) => void;
+  addHistoric: (term: string) => void;
 };
