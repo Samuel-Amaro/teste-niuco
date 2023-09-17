@@ -56,3 +56,14 @@ export type ResponseRepos = {
   homepage?: string;
   visibility?: string;
 }[];
+
+export type Historic = {
+  id: string;
+  timestamp: string;
+  term: string;
+};
+
+export type HistoricContextType = {
+  historic: Historic[];
+  addHistoric: (histor: Historic) => void;
+};
