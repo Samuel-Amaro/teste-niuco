@@ -18,8 +18,8 @@ O aplicativo da web deve ter duas páginas/rotas:
 
 ## Links
 
-- [Reposítorio Projeto]()
-- [Resultado Projeto]()
+- [Reposítorio Projeto](https://github.com/Samuel-Amaro/teste-niuco)
+- [Resultado Projeto](https://teste-niuco.vercel.app/)
 
 ## Construido Com
 
