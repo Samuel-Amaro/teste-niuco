@@ -22,4 +22,18 @@
 
 .containerMain{
   margin: 0 0 48px 0;
+  padding: 0 16px;
+}
+
+.messageLoading{
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 700;
+  padding: 24px;
+}
+
+@media screen and (min-width: 750px) {
+  .containerMain {
+      padding: 0;
+    }
 }
