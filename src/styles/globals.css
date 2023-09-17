@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  transition: all 0.35s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --color01: #141D2E;
+  --color02: #1E2B48;
+  --color03: #5BA5FA;
+}
+
+body{
+  background-color: var(--color01);
+}
