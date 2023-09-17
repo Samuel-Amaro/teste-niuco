@@ -1,9 +1,11 @@
 import { HistoricContextProvider } from "@/context/HistoricContext";
-import "./globals.css";
+import "../styles/normalize.css";
+import "../styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
+import Nav from "@/components/Nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Github username searcher",
@@ -17,8 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <HistoricContextProvider>{children}</HistoricContextProvider>{" "}
+      <body className={roboto.className}>
+        <HistoricContextProvider>
+          <Nav />
+          {children}
+        </HistoricContextProvider>{" "}
       </body>
     </html>
   );
