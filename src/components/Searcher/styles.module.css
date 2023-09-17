@@ -1,0 +1,121 @@
+.searcher{
+  margin: 32px 0 0 0;
+}
+
+.title{
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto 32px auto;
+  max-width: 700px;
+}
+
+.messageUser{
+  max-width: 700px;
+  color: white;
+  font-size: 1.10rem;
+  font-weight: 500;
+  margin: 16px auto 0 auto;
+  line-height: 1.8;
+}
+
+.containerRepos{
+  margin: 32px 0 0 0;
+}
+
+.containerReposTitle{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin: 0 0 24px 0;
+}
+
+.containerReposCard{
+  background-color: var(--color02);
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.containerReposCardIcon{
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+}
+
+.containerListRepos{
+  max-width: 700px;
+  margin: 0 auto 32px auto;
+}
+
+.containerReposCardTitle{
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.containerReposCardDescription{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.containerReposLink{
+  display: block;
+  text-decoration: none;
+  font-weight: 1.10rem;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.containerReposLink:is(:hover, :focus) {
+  text-decoration: underline;
+}
+
+.containerLinks{
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+  align-items: center;
+}
+
+.containerReposCard:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+
+.containerButtons{
+  max-width: 700px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.btn{
+  display: block;
+  box-sizing: border-box;
+  font-family: inherit;
+  appearance: none;
+  border: 1px solid lightgrey;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500; 
+  color: white;
+  background-color: var(--color03);
+  cursor: pointer;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: var(--color02);
+}
+
+.btn:disabled{
+  background-color: transparent;
+  color: lightgray;
+  opacity: 0.5;
+  border: 1px solid lightgrey;
+}
