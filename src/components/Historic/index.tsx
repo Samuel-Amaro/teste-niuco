@@ -13,7 +13,7 @@ export default function Historic() {
           .sort((a, b) => {
             const newDateA = new Date(a.timestamp);
             const newDateB = new Date(b.timestamp);
-            return newDateA.getTime() - newDateB.getTime();
+            return newDateB.getTime() - newDateA.getTime();
           })
           .map((hist) => {
             const newDate = new Date(hist.timestamp);
